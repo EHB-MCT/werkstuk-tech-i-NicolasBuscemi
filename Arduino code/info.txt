@@ -1,1 +1,32 @@
-Zet hier de arduino code
+//int LED = 2;
+//int Button = 3;      
+#define LED 10
+#define Button 2
+
++
+
+void setup() {
+ Serial.begin(9600);
+ pinMode(Button,INPUT);
+ pinMode(LED, OUTPUT);
+  
+}
+
+void loop() {
+  int Ledread = analogRead(LED);
+  digitalWrite(LED, HIGH);
+  Serial.println(Ledread);
+  
+  delay(700);
+  digitalWrite(LED, LOW);
+  delay(200);
+   digitalWrite(LED, HIGH);
+  delay(200);
+  digitalWrite(LED, LOW);
+  delay(200); 
+  digitalWrite(LED, HIGH);
+  delay(200); 
+  digitalWrite(LED, LOW);
+  delay(500);
+
+}
